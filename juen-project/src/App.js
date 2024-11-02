@@ -55,13 +55,13 @@ function App() {
             />
 
             <label>Gender:</label>
-            <input
-              type="text"
-              placeholder="Resident Gender"
-              value={gender}
+            <select 
               onChange={(e) => setGender(e.target.value)}
               style={{ width: '100%', marginBottom: '10px' }}
-            />
+            >
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
 
             <label>Room/Bed Number:</label>
             <input
