@@ -6,11 +6,8 @@ import './Dashboard.css';
 function Dashboard() {
   return (
     <div className="dashboard">
-      <Sidebar />
-      <div className="main-content">
-        <h1>To-Do List</h1>
-        <TodoList />
-      </div>
+      <h1>To-Do List</h1>
+      <TodoList />
     </div>
   );
 }
