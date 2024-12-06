@@ -1,0 +1,40 @@
+.daily-care-plans {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .resident-list {
+    width: 30%;
+    background-color: #f7f9fc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resident-card {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+  }
+  
+  .resident-card:hover {
+    background-color: #e3e8ef;
+  }
+  
+  .care-plan-details {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .care-plan-details h3 {
+    margin-top: 0;
+  }
+  
