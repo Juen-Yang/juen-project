@@ -1,0 +1,53 @@
+.administration-page {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .mini-sidebar {
+    width: 200px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mini-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mini-sidebar li {
+    padding: 10px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .mini-sidebar li:hover {
+    background-color: #e9ecef;
+  }
+  
+  .mini-sidebar li.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  .main-content h2 {
+    margin-bottom: 20px;
+    color: #343a40;
+  }
+  
+  .main-content p {
+    color: #6c757d;
+    font-size: 16px;
+  }
+  

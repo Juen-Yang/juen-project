@@ -7,14 +7,14 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/account">Account</Link></li>
-        <li><Link to="/patients">Patients</Link></li>
-        <li><Link to="/daily-care-plans">Daily Care Plans</Link></li>
-        <li><Link to="/administration">Administration</Link></li>
-        <li><Link to="/incident-reporting">Incident Reporting</Link></li>
-        <li><Link to="/communications-log">Communications Log</Link></li>
-        <li><Link to="/task-management">Task Management</Link></li>
+        <li className="sidebar-tab"><Link to="/">Home</Link></li>
+        <li className="sidebar-tab"><Link to="/account">Account</Link></li>
+        <li className="sidebar-tab"><Link to="/patients">Patients</Link></li>
+        <li className="sidebar-tab"><Link to="/daily-care-plans">Daily Care Plans</Link></li>
+        <li className="sidebar-tab"><Link to="/administration">Administration</Link></li>
+        <li className="sidebar-tab"><Link to="/incident-reporting">Incident Reporting</Link></li>
+        <li className="sidebar-tab"><Link to="/communications-log">Communications Log</Link></li>
+        <li className="sidebar-tab"><Link to="/task-management">Task Management</Link></li>
       </ul>
     </div>
   );

@@ -1,27 +1,53 @@
 .sidebar {
-    width: 250px;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 20px;
-  }
-  
-  .sidebar h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-  }
-  
-  .sidebar-tab {
-    padding: 12px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .sidebar-tab:hover {
-    background-color: #34495e;
-  }
-  
+  width: 300px; 
+  background-color: #1c2833; 
+  color: #f5f5f5;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  color: #ecf0f1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-tab {
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #ecf0f1;
+  text-decoration: none;
+  display: block;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-tab:hover {
+  background-color: #34495e; 
+  color: #f5f5f5; 
+}
+
+.sidebar-tab:active {
+  background-color: #2c3e50; 
+}
+
+.sidebar-tab:visited {
+  color: #ecf0f1; 
+}
+
+.sidebar-tab.active {
+  background-color: #2980b9; 
+  color: #ffffff;
+  font-weight: bold;
+}

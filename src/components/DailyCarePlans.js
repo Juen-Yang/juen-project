@@ -2,16 +2,49 @@ import React, { useState } from 'react';
 import './DailyCarePlans.css';
 
 function DailyCarePlans() {
-  const [residents, setResidents] = useState([
-    { id: 1, name: 'John Doe', carePlan: 'Medication at 9 AM, Breakfast at 8 AM' },
-    { id: 2, name: 'Jane Smith', carePlan: 'Physical therapy at 10 AM, Lunch at 12 PM' },
-  ]);
-
+  const [residents, setResidents] = useState([]);
+  const [newResidentName, setNewResidentName] = useState('');
   const [selectedResident, setSelectedResident] = useState(null);
+  const [carePlan, setCarePlan] = useState('');
+
+  // Add a new resident
+  const handleAddResident = () => {
+    if (newResidentName.trim() !== '') {
+      setResidents([
+        ...residents,
+        { id: Date.now(), name: newResidentName, carePlan: '' },
+      ]);
+      setNewResidentName('');
+    }
+  };
+
+  // Update care plan for the selected resident
+  const handleSaveCarePlan = () => {
+    setResidents(
+      residents.map((resident) =>
+        resident.id === selectedResident.id
+          ? { ...resident, carePlan }
+          : resident
+      )
+    );
+    setSelectedResident(null);
+    setCarePlan('');
+  };
 
   return (
     <div className="daily-care-plans">
       <h2>Daily Care Plans</h2>
+
+      {/* Add New Resident */}
+      <div className="add-resident">
+        <input
+          type="text"
+          value={newResidentName}
+          onChange={(e) => setNewResidentName(e.target.value)}
+          placeholder="Enter new resident name"
+        />
+        <button onClick={handleAddResident}>Add Resident</button>
+      </div>
 
       {/* Resident List */}
       <div className="resident-list">
@@ -20,7 +53,10 @@ function DailyCarePlans() {
           <div
             key={resident.id}
             className="resident-card"
-            onClick={() => setSelectedResident(resident)}
+            onClick={() => {
+              setSelectedResident(resident);
+              setCarePlan(resident.carePlan);
+            }}
           >
             <h4>{resident.name}</h4>
           </div>
@@ -32,11 +68,24 @@ function DailyCarePlans() {
         {selectedResident ? (
           <>
             <h3>Care Plan for {selectedResident.name}</h3>
-            <p>{selectedResident.carePlan}</p>
-            <button>Edit Care Plan</button>
+            <textarea
+              value={carePlan}
+              onChange={(e) => setCarePlan(e.target.value)}
+              placeholder="Enter care plan details"
+              rows="6"
+            />
+            <button onClick={handleSaveCarePlan}>Save Care Plan</button>
+            <button
+              onClick={() => {
+                setSelectedResident(null);
+                setCarePlan('');
+              }}
+            >
+              Cancel
+            </button>
           </>
         ) : (
-          <p>Select a resident to view their care plan.</p>
+          <p>Select a resident to view or edit their care plan.</p>
         )}
       </div>
     </div>
